@@ -1,0 +1,212 @@
+/* universal styling used to keep all elements in place */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* font family 'Epilogue' import using url */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
+body{
+    font-family: 'Epilogue', sans-serif;
+}
+/* rules for styling menu icon */
+.menu{
+    position: relative;
+    top: -10px;
+    left: 220px;
+}
+/* rules for styling header icon */
+header img{
+    margin: 20px 0 0 12px;
+}
+/* rule for styling the picture container */
+.pictures{
+    margin-top: 40px;
+}
+/* rule for styling picture image */
+.pictures img{
+    width: 100%;
+}
+/* rule for styling the area which i added text */
+.text-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* rule for styling the paragraph */
+.text-area p{
+    text-align: center;
+    width: 300px;
+    font-size: large;
+    margin-top: 15px;
+    font-family: 'Epilogue', sans-serif;
+}
+/* h1 syling */
+.text-area h1{
+    text-align: center;
+    width: 300px;
+    font-size: x-large;
+    margin-top: 30px;
+    font-family: 'Epilogue', sans-serif;
+}
+/* 'Learn more' button styling */
+.text-area button{
+    margin-top: 20px;
+    height: 40px;
+    width: 120px;
+    color: white;
+    background-color: black;
+    border: 0px solid black;
+    border-radius: 10px;
+}
+/* rule for styling the second pictures container */
+.pictures-2{
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+/* I wrapped the second group of pictures in a span for alignment */
+.pictures-2 span{
+padding-inline: 20px;
+}
+/* display none entirely removes the display property of an element, making it non visible,  */
+/* it applys to the elements below because i do not need them in my mobile design, */
+/* which is what I started with */
+.Register{
+    display: none;
+}
+.pic2{
+    display: none;
+}
+br{
+    display: none;
+}
+.dropdown{
+    display: none;
+}
+@media screen and (min-width: 1024px){
+    body{
+        height: 110vh;
+    }
+    .menu{
+        height: 0px;
+        width: 0px;
+    }
+    header img{
+        margin: 15px 0 0 40px;
+    }
+    .drop{
+        margin: -35px 0 0 200px;
+        color: hsl(0, 0%, 41%);
+    }
+    .Register{
+        margin: -21px 0 0 600px;
+        display: inherit;
+    }
+    .Register span{
+        padding-inline: 20px;
+    }
+    .pic1{
+        display: none;
+    }
+    .pic2{
+        display: inline;
+    }
+    .pictures{
+        width: 300px;
+        float: right;
+        margin-right: 130px;
+    }
+    .text-area h1{
+        font-size: 50px;
+        text-align: left;
+        margin: 100px 0 0 30px;
+    }
+    br{
+        display: inline;
+    }
+    .text-area p{
+        text-align: left;
+        margin-left: 30px;
+        color: hsl(0, 0%, 41%);
+        font-size: 18px;
+    }
+    .Register{
+        margin-left: 650px;
+        color: hsl(0, 0%, 41%);
+        cursor: pointer;
+    }
+    .text-area button{
+        margin-top: 40px;
+    }
+    .pictures-2{
+        margin: 35px 0 0 170px;
+    }
+    .Register button{
+        border-radius: 10px;
+        width: 80px;
+        height: 30px;
+        background-color: hsl(0, 0%, 98%);
+        color: hsl(0, 0%, 41%);
+        border: 1px solid hsl(0, 0%, 8%);
+        cursor: pointer;
+    }
+    .Learn:hover{
+        background-color: hsl(0, 0%, 98%);
+        color: black;
+        border: 1px solid hsl(0, 0%, 8%);
+        cursor: pointer;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        top: -10px;
+        color: hsl(0, 0%, 41%);
+        cursor: pointer;
+      }
+      
+      /* Style the dropdown content (hidden by default) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: hsl(0, 0%, 98%);
+        min-width: 110px;
+        min-height: 110px;
+        border-radius: 5px;
+        box-shadow: 0 8px 16px hsl(0, 0%, 41%);
+        padding: 2px;
+        z-index: 1;
+      }
+      .dropdown-content p{
+        margin-left: -25px;
+      }
+      .dropdown-content img{
+        padding-right: 2px;
+      }
+      span{
+        padding-inline: 10px;
+      }
+      /* Style the arrow after pseudo element(lets you style a specific part of an element) */
+      .dropdown .arrow::after {
+        content: '\25BE'; /* Unicode character for a down arrow */
+        margin-left: 5px;
+      }
+      /* Style the dropdown items */
+      .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        margin-top: -3px;
+      }
+      Change color on hover
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+      .seperate{
+        padding: 10px 0 0 10px;
+      }
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+}
